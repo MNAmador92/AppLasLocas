@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% load static %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mi primer Sitio Web - Noelia Amador</title>
+<link href="{% static 'AppLasLocas/css/styles.css' %}" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<!--menu-->
+<link rel="stylesheet" href="{% static 'AppLasLocas/css/superfish.css' %}" media="screen">
+<script src="{% static 'AppLasLocas/js/jquery-1.9.0.min.js' %}"></script>
+<script src="{% static 'AppLasLocas/js/hoverIntent.js' %}"></script>
+<script src="{% static 'AppLasLocas/js/superfish.js' %}"></script>
+<script>
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('#example').superfish({
+				//useClick: true
+			});
+		});
+
+		</script>
+</head>
+
+<body>
+
+
+  <div class="wrap1">
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <a href="{% url 'Inicio' %}" title="Página principal" id="logo" >
+          <img src="{% static 'AppLasLocas/images/logo.png' %}" width="250" height="145" alt="image">
+        </a>
+        </div>
+        <div style="text-align:center">    {% if request.user.is_authenticated %}
+          <b><p style="color: rgb(129, 88, 252);"> Bienvenida de nuevo, {{user.username}}!</b>
+            {% with first_image=user.avatar_set.last %}
+              {% if first_image %}
+                <img src="{{ first_image.imagen.url }}" width="40" height="40">
+              {% endif %}
+            {% endwith %} 
+          </p>
+            
+          
+          {% endif %}
+          </div>
+          <br>
+    <div class="menu">
+      <ul class="sf-menu" id="example">
+        <li><a href={% url 'Inicio' %}>Home</a></li>
+        <li><a href={% url 'VerServicios' %}>Servicios</a></li>
+        <li><a href={% url 'TurnosOnline' %}>Turnos Online</a></li>
+        <li><a href={% url 'Contacto' %}>Contacto</a></li>
+        <li><a href={% url 'About' %}>About</a></li>
+
+        <br>
+        <br>
+        <br>
+        {% if request.user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'EditarUsuario' %}">Editar Usuario</a>
+        <a class="btn btn-primary" href="{% url 'Logout' %}">Cerrar Sesión</a>
+
+        {% else %}
+        <br>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="{% url 'Login' %}">Iniciar Sesión</a>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+  <div class="clearing"></div>
+</div>
+<div class="clearing"></div>
+</div>
+<!---header-wrap--->
+<div class="wrap2">
+<div class="container">
+  <br>
+  <br>
+  <br>
+  {% block titulo %}
+
+  {% endblock %}
+  {% block logueo %}
+
+  {% endblock %}
+
+  <br>
+    <div class="banner-shadows"></div>
+  </div>
+<div class="clearing"></div>
+</div>
+</div>
+<!---banner-wrap--->
+
+
+<!---wrap4--->
+<div class="wrap3">
+<div class="container">
+  <h4><p><div class="footer" style="color: white;" >Realizado por Noelia Amador. <a style="color: black ;" href="https://github.com/MNAmador92/AppLasLocas.git">Link a GitHub</a></h4></p>
+  
+<div class="clearing"></div>
+</div>
+</div>
+<div class="shadows2">
+</div>
+</body>
+</html>

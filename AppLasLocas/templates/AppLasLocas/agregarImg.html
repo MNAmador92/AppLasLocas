@@ -1,0 +1,18 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %} 
+
+{% block titulo %} 
+
+<form action="" method="POST" enctype="multipart/form-data"> {%csrf_token%}
+
+    <table>
+
+            {{imagen.as_table}}
+
+    </table>
+    <br>
+    <input type="submit", value="Enviar Imagen", style="color: black">
+
+</form> 
+{% endblock %} 

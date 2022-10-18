@@ -1,0 +1,24 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+{% block titulo %}
+    
+    <form action="" method="POST"> {% csrf_token %}
+
+    
+
+        {{formu3.as_p}}
+        <br>
+        <button type="submit">Iniciar sesión</button>
+        <br>
+        <br>
+    <p><h4>¿No te registraste aún?</h4></p> 
+    <br>
+    <button><b><a href=" {% url 'Registrarse' %} " style="color: black ;">Registrarse</a></button></b>
+    
+    
+    
+    </form>
+
+{% endblock %} 

@@ -1,0 +1,17 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+{% block titulo %}
+<h2><p>{{servicio.nombre}} </p></h2>
+<br>
+<h3>{{servicio.info}} </p></h3><p>
+<br>
+<b><li>Horarios:</b> {{servicio.horarios}}</li>
+<b><li>Costo:</b> {{servicio.costo}}</li>
+<br>
+<h4><p><a href=" {% url 'TurnosOnline' %} ">Pedir Turno</a></p></h4>
+<p><a href=" {% url 'VerServicios' %} ">Volver</a></p>
+
+
+{% endblock %} 

@@ -1,0 +1,19 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}
+
+{% block titulo %}
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        <h3><p>¿Estás seguro que deseas borrar {{servicio.nombre}}?</p></h3>
+        <br>
+        <input type="submit" value="Enviar">
+    
+    
+    
+    
+    
+    </form>
+
+{% endblock %} 

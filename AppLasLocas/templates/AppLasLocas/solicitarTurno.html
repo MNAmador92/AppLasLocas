@@ -1,0 +1,33 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+
+{% block titulo %}
+
+    <form action="" method="POST"> {% csrf_token %}
+    
+    <table>
+        <h3><p>Por favor, indicá debajo para qué servicio deseas solicitar turno, y a la brevedad te contactaremos:</p></h3>
+        <br>
+        <p>1) Uñas</p>
+        <p>2) Pestañas</p>
+        <p>3) Tratamientos Capilares</p>
+        <p>4) Tratamientos Faciales</p>
+        <p>5) Depilación Definitiva</p>
+        <p>6) Pedicuría y Podología</p>
+        <br>
+        {{formuTurno.as_p}}
+        <br>
+
+
+    </table>
+
+
+
+<input type="submit" value="ENVIAR">
+
+
+</form>
+
+{% endblock %} 

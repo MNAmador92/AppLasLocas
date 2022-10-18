@@ -1,0 +1,33 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+{% block titulo %}
+
+
+    <h3>USER: {{usuario}}</h3>
+    <br>
+    
+    <form action="/AppLasLocas/editarusuario/" method="POST"> {% csrf_token %}
+    
+    <table>
+
+        {{formuEditar.as_p}}
+
+
+    </table>
+    <input type="submit" value="ENVIAR">
+    <br>
+    <br>
+    <br>
+    <h4><b>Agregá tu foto de perfil:</b></h4>
+    <br>
+    <button><a href="{% url 'Avatar' %}">Subir Imagen</a></button>
+
+</form>
+<br>
+<br>
+
+
+
+{% endblock %} 

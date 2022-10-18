@@ -1,0 +1,33 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+{% block titulo %}
+
+<form action="/AppLasLocas/resultados/" method="GET">
+
+    <p>¿Qué servicio buscás? </p>
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+
+</form>
+<br>
+<br>
+    <h1>Servicios que ofrecemos:</h1>
+    <br>
+    {% for servicio in object_list %}
+    
+    <h2><li>{{servicio.nombre}}</li></h2>
+
+    <h3><a href=" {% url 'DetalleServicio' servicio.id %} ">+ Info</a></h3>
+        {% if request.user.is_superuser %}
+            <h3><a href=" {% url 'ActualizarServicio' servicio.id %} ">Actualizar</a></h3>
+            <h3><a href=" {% url 'BorrarServicio' servicio.id %} ">Borrar</a></h3>
+        {% endif %}
+    
+    {% endfor %}
+    <br>
+    <br>
+
+{% endblock %} 

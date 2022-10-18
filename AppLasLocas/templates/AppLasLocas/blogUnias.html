@@ -1,0 +1,71 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %} 
+
+
+
+{% block titulo %}
+
+<!---header-wrap--->
+  <div class="wrap4">
+    <div class="container">
+      <div class="leftcol">
+        <div class="title">
+          <h1>Cómo cuidar tus uñas...</h1>
+        </div>
+        <div class="page-content">
+        <div class="panel borderbotm-none">
+          <div class="content">
+            <p align ="right">Martes 18 de Octubre de 2022</p>
+            <h2>A tener en cuenta</h2>
+            <p>En Las Locas, trabajamos con los mejores productos y técnicas, asegurándote así de que vas a tener manos perfectas por hasta 3 semanas.</p>
+            <p>Pero no nos olvidemos de que hay otro factor muy importante: el cuidado que le das en casa. Por eso te dejamos un paso a paso para que tus uñas estén perfectas y cuidadas.</p>
+            <br>
+            <h3 id = "ref1">1. La humedad</h3>
+            <br>
+            <p>El primer paso para cuidar tus uñas acrílicas será protegerlas del agua. <b>El exceso de humedad puede ocasionar que el acrílico se desgaste, además se convierte en el lugar perfecto para la proliferación de hongos y bacterias.</b> Para evitarlo usa guantes cuando tengas que hacer alguna labor doméstica o que estas tengan que entrar en contacto con el agua, usa una toalla de tela o papel para secarlas bien. Si tus manos son muy húmedas por naturaleza, aplica un poco de polvos de talco para que este la absorba.</p>
+            <br>
+            <h3 id = "ref2">2. Cuidado antibacterial</h3>
+            <br>
+            <p>La uñas acrílicas son un blanco fácil para la proliferación de bacterias y hongos, por lo que te <b>recomendamos usar un jabón antibacterial,</b> esto permitirá mantener a las bacterias lo más alejadas posible, además de evitar que estas se decoloren.</p>
+            <br>
+            <h3 id = "ref3">3. Golpes y presión</h3>
+            <br>
+            <p><b>Evita ejercer presión sobre tus uñas para que el acrílico no se rompa.</b> En caso de que alguna parte de la uña esté rota o notes que el acrílico se levanta, <b>es recomendable que vayas a la manicurista para que la revise y haga el arreglo que necesitas.</b> Evita arreglarla con pegamento. Por otro lado debes estar alerta en caso de que exista enrojecimiento o descamación de la piel en el área de la uña, esto puede indicar una dermatitis por contacto, es decir que tu piel no está reaccionando bien frente al acrílico, por lo que te sugerimos que retires las uñas.</p>
+            <br>
+            <h3 id = "ref4">4. Hidratación</h3>
+            <br>
+            <p>Con el tiempo el acrílico va perdiendo su brillo, por lo que otra forma de cuidar las uñas acrílicas es <b>aplicar aceite para cutícula</b> con un algodón una o dos veces al día, esto también permitirá que tus uñas sean más flexibles y no se rompan con facilidad.</p>
+            <br>
+            <h3 id = "ref5">5. Service</h3>
+            <br>
+            <p>El acrílico después de dos semanas no tiene la misma apariencia, además tu uña natural habrá crecido un poco, por lo que <b>es recomendable que vayas a tu manicurista para rellenar la uña y así puedan unirse</b>, de esta forma tus uñas se verán más brillantes y evitarás el riesgo de infección.</p>
+
+            <br>
+            <p>Solicita más información sobre este tratamiento haciendo <b><a href="{% url 'Contacto' %}">click aqui</a></p></b>
+
+
+          </div>
+        </div>
+        </div>
+        
+      </div>
+      <div class="rightcol">
+        <div class="title">
+          <h1>Guía</h1>
+        </div>        <div class="panel">
+          <div class="content">
+            <ul>
+              <li><a href="#ref1">La humedad</a></li>
+              <li><a href="#ref2">Cuidado antibacterial</a></li>
+              <li><a href="#ref3">Golpes y presión</a></li>
+              <li><a href="#ref5">Hidratación</a></li>
+              <li><a href="#ref5">Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <div class="clearing"></div>  
+    </div>
+  </div>
+{% endblock %} 

@@ -1,0 +1,18 @@
+
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+{% block titulo %}
+
+<h3>Cree o edite un Servicio:</h3>
+<br>
+<form action="" method="POST"> {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" name="ENVIAR" id="ENVIAR">
+
+</form>
+
+{% endblock %} 

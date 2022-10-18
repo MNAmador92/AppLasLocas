@@ -1,0 +1,24 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %} 
+
+
+
+{% block titulo %}
+{{mensaje}}
+
+<h3><b> Estás buscando el servicio: {{busqueda}} </b></h3>
+
+    {% for servicio in servicio %} 
+
+        <ul>
+            <br>
+            <b><li>Servicio:</b> {{servicio.nombre}}</li>
+            <b><li>Info:</b> {{servicio.info}}</li>
+            <b><li>Horarios:</b> {{servicio.horarios}}</li>
+            <b><li>Costo:</b> {{servicio.costo}}</li>
+        </ul>
+        <br>
+    {% endfor %}
+<p>Solicita más información sobre este tratamiento haciendo <b><a href="{% url 'Contacto' %}">click aqui</a></p></b>
+{% endblock %} 

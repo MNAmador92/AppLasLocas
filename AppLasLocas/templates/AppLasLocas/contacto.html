@@ -1,0 +1,27 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %}  
+
+{% block titulo %}
+
+<p><h1>Te invitamos a seguirnos en nuestras RRSS:</h1></p>
+<br>
+<h2><p><a href="https://www.instagram.com/laslocasbeauty/" target = "_blank">Instagram</a></p></h2>
+<h2><p><a href="https://www.facebook.com/profile.php?id=100063446212488" target = "_blank">Facebook</a></p></h2>
+<br>
+<p><h2>O sino, dejanos tus datos y a la brevedad nos pondremos en contacto:</h2></p>
+<br>
+
+<form action="" method="POST"> {% csrf_token %}
+<table> 
+
+    {{formuContacto.as_p}}
+
+</table>
+<br>
+<input type="submit" value="ENVIAR">
+
+</form>
+
+
+{% endblock %} 

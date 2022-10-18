@@ -1,0 +1,21 @@
+{% extends "AppLasLocas/padre.html" %} 
+
+{% load static %} 
+
+
+
+
+{% block titulo %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    
+
+    {{formu4.as_p}}
+    <br>
+    <button type="submit">Registrarse</button>
+    
+    
+    
+</form>
+{% endblock %} 
